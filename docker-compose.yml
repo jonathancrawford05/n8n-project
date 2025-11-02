@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  n8n:
+    build: .
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    env_file:
+      - .env
+    environment:
+      # Override any env file settings here if needed
+      - N8N_SECURE_COOKIE=false
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ~/.n8n:/home/node/.n8n
+      - ~/.n8n/files:/files  # For binary data storage
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:5678/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

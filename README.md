@@ -12,6 +12,16 @@ This repository contains a custom n8n Docker image with poppler-utils installed 
   - `pdfunite` - Merge PDFs
   - `pdfseparate` - Split PDFs
 - Ollama integration support for local LLM workflows
+- Optimized configuration addressing n8n v1.116+ deprecations
+
+## Configuration
+
+This setup includes optimizations for n8n v1.116.2+ addressing all deprecation warnings:
+
+- **Task Runners**: Enabled for improved execution performance
+- **SQLite Connection Pooling**: Configured for better concurrent operations
+- **Security Hardening**: File permissions and Git security settings
+- **AI Workflow Optimization**: Extended timeouts and memory allocation
 
 ## Quick Start
 
@@ -21,7 +31,7 @@ This repository contains a custom n8n Docker image with poppler-utils installed 
 docker build -t n8n-with-poppler .
 ```
 
-### Run n8n with Poppler and Ollama Support
+### Run n8n with Full Configuration
 
 ```bash
 docker run -d \
@@ -29,38 +39,47 @@ docker run -d \
   --restart unless-stopped \
   -p 5678:5678 \
   -e N8N_SECURE_COOKIE=false \
+  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
+  -e DB_SQLITE_POOL_SIZE=4 \
+  -e N8N_RUNNERS_ENABLED=true \
+  -e N8N_BLOCK_ENV_ACCESS_IN_NODE=false \
+  -e N8N_GIT_NODE_DISABLE_BARE_REPOS=true \
+  -e N8N_DEFAULT_BINARY_DATA_MODE=filesystem \
+  -e EXECUTIONS_PROCESS_MAX_TIMEOUT=3600 \
+  -e GENERIC_TIMEZONE=America/Toronto \
   --add-host=host.docker.internal:host-gateway \
   -v ~/.n8n:/home/node/.n8n \
   n8n-with-poppler
 ```
 
-Note: The `--add-host=host.docker.internal:host-gateway` flag enables communication with services running on your host machine (like Ollama).
+### Docker Compose (Recommended)
 
-### Docker Compose (Optional)
+Use the provided `docker-compose.yml`:
 
-Create a `docker-compose.yml` file:
+```bash
+# Copy .env.example to .env and adjust settings if needed
+cp .env.example .env
 
-```yaml
-version: '3'
-
-services:
-  n8n:
-    build: .
-    container_name: n8n
-    restart: unless-stopped
-    ports:
-      - "5678:5678"
-    environment:
-      - N8N_SECURE_COOKIE=false
-      - N8N_HOST=0.0.0.0
-      - N8N_PORT=5678
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    volumes:
-      - ~/.n8n:/home/node/.n8n
+# Start n8n
+docker-compose up -d
 ```
 
-Then run: `docker-compose up -d`
+The docker-compose setup includes:
+- All deprecation fixes
+- Health checks
+- Binary data volume mounting
+- Environment file support
+
+### Environment Variables
+
+See `.env.example` for all available configuration options. Key settings:
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `N8N_RUNNERS_ENABLED` | true | Enable task runners for better performance |
+| `DB_SQLITE_POOL_SIZE` | 4 | SQLite connection pool size |
+| `N8N_BLOCK_ENV_ACCESS_IN_NODE` | false | Allow/block environment variable access in code nodes |
+| `EXECUTIONS_PROCESS_MAX_TIMEOUT` | 3600 | Max execution time (1 hour for AI workflows) |
 
 ## Ollama Integration
 
@@ -199,6 +218,18 @@ pdfseparate -f 1 -l 5 /tmp/input.pdf /tmp/page-%d.pdf
 
 All n8n data (workflows, credentials, execution history) is stored in the `~/.n8n` directory on your host machine. This data persists between container restarts and rebuilds.
 
+## Monitoring and Logs
+
+View container logs:
+```bash
+docker logs -f n8n
+```
+
+Check container health:
+```bash
+docker ps --format "table {{.Names}}\t{{.Status}}"
+```
+
 ## Updating
 
 To update to the latest n8n version:
@@ -208,12 +239,22 @@ To update to the latest n8n version:
 3. Stop old container: `docker stop n8n && docker rm n8n`
 4. Run the new container with the same volume mount
 
+## Migration Notes
+
+### From Versions < 1.116.2
+
+If upgrading from older versions, the following environment variables are now recommended:
+- Add `N8N_RUNNERS_ENABLED=true`
+- Add `DB_SQLITE_POOL_SIZE=4`
+- Review code nodes if setting `N8N_BLOCK_ENV_ACCESS_IN_NODE=true`
+
 ## Security Considerations
 
 - Ollama binds to `0.0.0.0` only for local Docker access
 - Consider firewall rules if running on a server
 - Use environment variables for sensitive configurations
 - Regularly update both n8n and Ollama
+- File permissions are enforced with `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS`
 
 ## License
 
