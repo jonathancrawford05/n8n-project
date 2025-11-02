@@ -1,0 +1,39 @@
+# Git files
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Python files (not needed for n8n)
+*.py
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+src/
+tests/
+pyproject.toml
+
+# Virtual environments
+.venv
+venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archive
+archive/
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg
