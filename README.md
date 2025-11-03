@@ -13,6 +13,7 @@ This repository contains a custom n8n Docker image with poppler-utils installed 
   - `pdfseparate` - Split PDFs
 - Ollama integration support for local LLM workflows
 - Optimized configuration addressing n8n v1.116+ deprecations
+- Host volume mounting for easy file access
 
 ## Configuration
 
@@ -49,6 +50,9 @@ docker run -d \
   -e GENERIC_TIMEZONE=America/Toronto \
   --add-host=host.docker.internal:host-gateway \
   -v ~/.n8n:/home/node/.n8n \
+  -v ~/Downloads/n8n-outputs:/outputs \
+  -v ~/Documents/n8n-files:/documents \
+  -v /tmp/n8n-temp:/tmp \
   n8n-with-poppler
 ```
 
@@ -57,6 +61,9 @@ docker run -d \
 Use the provided `docker-compose.yml`:
 
 ```bash
+# Create required directories
+mkdir -p ~/Downloads/n8n-outputs ~/Documents/n8n-files /tmp/n8n-temp
+
 # Copy .env.example to .env and adjust settings if needed
 cp .env.example .env
 
@@ -68,6 +75,7 @@ The docker-compose setup includes:
 - All deprecation fixes
 - Health checks
 - Binary data volume mounting
+- Host-accessible output directories
 - Environment file support
 
 ### Environment Variables
@@ -80,6 +88,63 @@ See `.env.example` for all available configuration options. Key settings:
 | `DB_SQLITE_POOL_SIZE` | 4 | SQLite connection pool size |
 | `N8N_BLOCK_ENV_ACCESS_IN_NODE` | false | Allow/block environment variable access in code nodes |
 | `EXECUTIONS_PROCESS_MAX_TIMEOUT` | 3600 | Max execution time (1 hour for AI workflows) |
+
+## File Access and Volume Mounts
+
+This setup includes convenient volume mounts that allow n8n workflows to write files directly to accessible locations on your host machine:
+
+### Volume Mappings
+
+| Container Path | Host Path | Purpose |
+|----------------|-----------|---------|
+| `/outputs` | `~/Downloads/n8n-outputs` | Workflow outputs, easily accessible |
+| `/documents` | `~/Documents/n8n-files` | Document storage and processing |
+| `/tmp` | `/tmp/n8n-temp` | Temporary files |
+| `/home/node/.n8n` | `~/.n8n` | n8n data persistence |
+
+### Using Volume Mounts in Workflows
+
+#### In Write Files Nodes
+Instead of writing to container-only paths, use the mounted directories:
+
+```javascript
+// Write to Downloads folder (easily accessible)
+/outputs/processed-report.pdf
+
+// Write to Documents folder
+/documents/{{ $now.toFormat('yyyy-MM-dd') }}-analysis.pdf
+
+// Temporary processing
+/tmp/working-file.pdf
+```
+
+#### Example: Email Attachment Processing
+1. Gmail Trigger receives email with PDF
+2. Write Files node saves to: `/outputs/{{ $json.attachment_0.fileName }}`
+3. File appears in: `~/Downloads/n8n-outputs/` on your Mac
+
+#### Example: Report Generation
+1. Generate PDF report in workflow
+2. Write to: `/documents/reports/{{ $now.toFormat('yyyy-MM') }}/report.pdf`
+3. Access from: `~/Documents/n8n-files/reports/2024-11/report.pdf`
+
+### Creating Output Directories
+
+Before first use, create the directories:
+
+```bash
+mkdir -p ~/Downloads/n8n-outputs
+mkdir -p ~/Documents/n8n-files
+mkdir -p /tmp/n8n-temp
+```
+
+### Best Practices
+
+1. **Use `/outputs`** for files users need to access immediately
+2. **Use `/documents`** for long-term storage and organization
+3. **Use `/tmp`** for intermediate processing files
+4. **Organize with subdirectories**: `/outputs/invoices/2024/`
+5. **Include timestamps** in filenames to avoid overwrites
 
 ## Ollama Integration
 
@@ -143,22 +208,25 @@ Combine poppler and Ollama to extract and summarize PDF content:
 
 ```bash
 # In Execute Command node
-pdftotext input.pdf - | head -n 100
+pdftotext /outputs/input.pdf - | head -n 100
 
 # Pass output to Ollama for summarization
+# Save summary to /outputs/summary.txt
 ```
 
-### 2. Smart Email Processing
+### 2. Smart Email Processing with File Output
 
-- Use Gmail trigger to receive emails
-- Analyze with Ollama for categorization and priority
-- Apply labels and organize automatically
+- Gmail trigger receives emails with attachments
+- Save attachments to `/outputs/email-attachments/`
+- Analyze with Ollama for categorization
+- Generate report and save to `/documents/email-reports/`
 
-### 3. Document Q&A System
+### 3. Document Processing Pipeline
 
-- Extract text from PDFs using poppler
-- Store in vector database
-- Query with natural language using Ollama
+- Read PDFs from `/documents/inbox/`
+- Process with poppler tools
+- Analyze with Ollama
+- Save results to `/outputs/processed/`
 
 ## Using Poppler in n8n Workflows
 
@@ -166,19 +234,39 @@ Use the Execute Command node in n8n to run poppler commands:
 
 ```bash
 # Extract text from PDF
-pdftotext /tmp/input.pdf /tmp/output.txt
+pdftotext /tmp/input.pdf /outputs/extracted-text.txt
 
 # Get PDF info
-pdfinfo /tmp/document.pdf
+pdfinfo /documents/document.pdf > /outputs/pdf-metadata.txt
 
 # Convert PDF to images
-pdftoppm -png /tmp/document.pdf /tmp/page
+pdftoppm -png /tmp/document.pdf /outputs/page
 
 # Extract specific pages
-pdfseparate -f 1 -l 5 /tmp/input.pdf /tmp/page-%d.pdf
+pdfseparate -f 1 -l 5 /documents/input.pdf /outputs/page-%d.pdf
 ```
 
 ## Troubleshooting
+
+### File Access Issues
+
+1. **Verify volume mounts are working**:
+   ```bash
+   # Check from within container
+   docker exec n8n ls -la /outputs
+   docker exec n8n ls -la /documents
+   ```
+
+2. **Test write permissions**:
+   ```bash
+   docker exec n8n touch /outputs/test.txt
+   # Check if file appears in ~/Downloads/n8n-outputs/
+   ```
+
+3. **File not appearing in expected location**:
+   - Ensure directories exist on host
+   - Check Docker volume mount syntax
+   - Verify no typos in file paths
 
 ### Ollama Connection Issues
 
@@ -200,7 +288,7 @@ pdfseparate -f 1 -l 5 /tmp/input.pdf /tmp/page-%d.pdf
 ### PDF Processing Issues
 
 - Ensure PDF files are accessible within the container
-- Use absolute paths or copy files to `/tmp` directory
+- Use absolute paths or mounted directories
 - Check file permissions
 
 ### Performance Optimization
@@ -230,6 +318,12 @@ Check container health:
 docker ps --format "table {{.Names}}\t{{.Status}}"
 ```
 
+Monitor file operations:
+```bash
+# Watch for new files in output directory
+ls -la ~/Downloads/n8n-outputs/
+```
+
 ## Updating
 
 To update to the latest n8n version:
@@ -255,6 +349,7 @@ If upgrading from older versions, the following environment variables are now re
 - Use environment variables for sensitive configurations
 - Regularly update both n8n and Ollama
 - File permissions are enforced with `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS`
+- Be cautious with file paths in workflows to prevent unauthorized access
 
 ## License
 

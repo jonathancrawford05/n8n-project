@@ -17,6 +17,9 @@ services:
     volumes:
       - ~/.n8n:/home/node/.n8n
       - ~/.n8n/files:/files  # For binary data storage
+      - ~/Downloads/n8n-outputs:/outputs  # Easy access for outputs
+      - ~/Documents/n8n-files:/documents  # Document storage
+      - /tmp/n8n-temp:/tmp  # Temporary files
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:5678/healthz"]
       interval: 30s
