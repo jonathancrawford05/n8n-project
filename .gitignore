@@ -11,3 +11,8 @@ wheels/
 
 # Archive directory for historical documentation
 archive/
+
+# Local n8n config / secrets (never commit)
+.env
+# Exported credentials are sensitive — back them up out-of-band, not in git
+credentials/
