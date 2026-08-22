@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T00:02:59.000Z",
+  "updatedAt": "2026-07-22T11:39:56.000Z",
   "createdAt": "2025-11-22T21:49:32.172Z",
   "id": "oTx7Ex5L2BjeoG96",
   "name": "Move Labeled Emails to Folder",
@@ -689,7 +689,7 @@
         "limit": 500,
         "filters": {
           "receivedAfter": "2026-07-21T00:00:00",
-          "sender": "english-personalized-digest@quora.com OR sciencefringeareas-space@quora.com OR scienceandtechnologynews-space@quora.com OR wondersofthepast-space@quora.com OR spacenews-space@quora.com OR extremelyinterestingfacts-space@quora.com OR askdaddy-space@quora.com OR mathquestions-space@quora.com OR foodfunandphysics-space@quora.com OR meevnetsspace-space@quora.com OR osazesciencemastersspace-space@quora.com OR scientificsociety-space@quora.com OR truthaboutrussia-space@quora.com OR askanastronomer-space@quora.com OR beautifuluniverse11space-space@quora.com OR thesciencespace-space@quora.com OR codecamp-space@quora.com OR statepolitics-space@quora.com OR megadevices-space@quora.com OR blockuniversemodel-space@quora.com OR populartechnology-space@quora.com OR sciencephysicsmath-space@quora.com OR agingwithanattitude-space@quora.com OR jokesfunnystories-space@quora.com OR souravrakshitspace-space@quora.com OR guloceam-space@quora.com OR trumpersaretraitors-space@quora.com OR mechanicalengineeringinsightsmei-space@quora.com OR quicksearch-space@quora.com OR sciencehyperfieldshfmindrix-space@quora.com OR opentalkarena-space@quora.com OR matematicaarta-space@quora.com OR picturesfrommusichistory-space@quora.com"
+          "sender": "english-personalized-digest@quora.com OR sciencefringeareas-space@quora.com OR scienceandtechnologynews-space@quora.com OR wondersofthepast-space@quora.com OR spacenews-space@quora.com OR extremelyinterestingfacts-space@quora.com OR askdaddy-space@quora.com OR mathquestions-space@quora.com OR foodfunandphysics-space@quora.com OR meevnetsspace-space@quora.com OR osazesciencemastersspace-space@quora.com OR scientificsociety-space@quora.com OR truthaboutrussia-space@quora.com OR askanastronomer-space@quora.com OR beautifuluniverse11space-space@quora.com OR thesciencespace-space@quora.com OR codecamp-space@quora.com OR statepolitics-space@quora.com OR megadevices-space@quora.com OR blockuniversemodel-space@quora.com OR populartechnology-space@quora.com OR sciencephysicsmath-space@quora.com OR agingwithanattitude-space@quora.com OR jokesfunnystories-space@quora.com OR souravrakshitspace-space@quora.com OR guloceam-space@quora.com OR trumpersaretraitors-space@quora.com OR mechanicalengineeringinsightsmei-space@quora.com OR quicksearch-space@quora.com OR sciencehyperfieldshfmindrix-space@quora.com OR opentalkarena-space@quora.com OR matematicaarta-space@quora.com OR picturesfrommusichistory-space@quora.com OR scienceportal-space@quora.com OR corruptiontrumpandgop-space@quora.com OR brisbiz-space@quora.com OR theacademicspace-space@quora.com OR thevirago-space@quora.com OR israelobserver-space@quora.com OR boomersforchange-space@quora.com OR leftistviewpoints-space@quora.com"
         }
       },
       "id": "09b354ba-232e-4ef5-a2d7-c9ef659d8d9b",
@@ -1710,15 +1710,15 @@
         "returnAll": true,
         "filters": {
           "includeSpamTrash": false,
-          "q": "from:no-reply@marketing.lyftmail.com OR from:triangle@email.triangle.com OR from:mail@eg.vrbo.com OR eflyerfeedback@email.canadiantire.ca OR jwmi@learning.strayeruniversity.edu OR vaughan.events@airdrierz.com OR news@m.int.clearscore.com OR browns@info.brownsshoes.com OR newsletters@em.walmart.com OR moores@mktg.mooresclothing.com OR noreply@handandstone.ca OR marks@email.marks.com OR oic@ninesigma.com OR do_not_reply@mountainwarehouse.com OR email@newsletter.mountainwarehouse.com OR hello@whosponsorsstuff.com OR the-elves@elfster.com OR mail@hello.elfster.com OR members@rewards.theexcellencecollection.com OR ob@innovatingwithai.com OR eric@ericpartaker.com OR paul@shopifreaks.com OR techpresso@dupple.com OR theaireport@mail.beehiiv.com OR contact@aientrepreneurs.standout.digital OR rob@innovatingwithai.com OR runcilr@mail.packtpub.com OR hello@medium.com OR sdo@profile.co.za OR productforengineers@substack.com OR viarail@message.viarail.ca OR marriottbonvoy@email-marriott.com OR noreply@mixcloudmail.com OR cineplex@campaigns.cineplex.com OR no-reply@pizzaville.ca OR lkagan@itmustbedone.com OR lilly@thinkhomewise.com OR info@e.shoppersdrugmart.ca OR contact@ticketsmarter.com OR communications@mail.aircanada.com OR no-reply@ymcagta.org OR rewards@c.pxsmail.com OR mark@markmanson.net OR info@hammamspa.ca OR packt@mail.packtpub.com OR info@rocketdoctor.io OR info@upgradintl.com OR michael.ortega@predibase.com OR austinm@mail.packtpub.com OR canoo@canoo.ca OR noreply@email.pcoptimum.ca OR info@comms.hellopeter.co.za OR newsletter@whosponsorsstuff.com OR engineerofdata@substack.com OR info@learning.strayeruniversity.edu OR mmai@queensu.ca OR canoo@newsletter.canoo.ca OR no-reply@shopmakers.ca OR hello@refind.com OR no-reply@spotify.com OR contact@furnaceprices.ca OR newsletters@medium.com OR memberservices@ymcagta.org OR hello@contra.com OR Lesley.Davidson@ymcagta.org OR hello@atlanhq.com OR loblaws@e.loblaws.ca OR noreply@mailing.fifa.com OR store-news@amazon.ca OR sales@canadianappliance.ca OR notifications@account.brilliant.org OR support@news.chuckecheese.com OR info-pawsitivelypetskidscamp.com@shared1.ccsend.com OR mail@iconscout.com OR change@e.change.org OR hello@leanpub.com OR noreply@em.pcoptimum.ca OR mfit@queensu.ca OR giving@ymcagta.org OR oundation@tpl.ca OR foundation@tpl.ca OR updates@t.int.clearscore.com OR notice@eml.ecobee.com OR no-reply@email-kumon.com OR no-reply@lyftmail.com OR noreply@jackrabbittech.com OR editors-noreply@linkedin.com OR info@members.netflix.com OR webteam-actuarialcareers.com@shared1.ccsend.com OR thedankoe@substack.com OR surveys@canoo.ca OR updates-noreply@linkedin.com OR jakub@mail.leadershipintech.com OR meta@marketing.metamail.com OR info@updates.upgrad.com OR offers@e.walmart.ca OR no-reply@docker.com OR no-reply@customers.instacartemail.com OR linkedin@em.linkedin.com OR mktg@communications.cineplex.com OR admissions@quantic.edu OR notifications@mail.flova.ai OR news@nvidia.com OR updates@mp1.tripadvisor.com OR no-reply@substack.com OR canadiantire@express.can.medallia.ca OR noreply-reviews@canadiantire.ca OR reply@e.theburgerspriest.com OR applications-ww@admissions.ggu.edu OR info@vrcade.ca OR teamzoom@e.zoom.us OR email@marketing.metamail.com OR canadiantire@em.canadiantire.ca OR theexcellencecollection@news.theexcellencecollection.com OR vrbo@eg.vrbo.com OR noreply@hello.chamberlain.com"
+          "q": "from:no-reply@marketing.lyftmail.com OR from:triangle@email.triangle.com OR from:mail@eg.vrbo.com OR eflyerfeedback@email.canadiantire.ca OR jwmi@learning.strayeruniversity.edu OR vaughan.events@airdrierz.com OR news@m.int.clearscore.com OR browns@info.brownsshoes.com OR newsletters@em.walmart.com OR moores@mktg.mooresclothing.com OR noreply@handandstone.ca OR marks@email.marks.com OR oic@ninesigma.com OR do_not_reply@mountainwarehouse.com OR email@newsletter.mountainwarehouse.com OR hello@whosponsorsstuff.com OR the-elves@elfster.com OR mail@hello.elfster.com OR members@rewards.theexcellencecollection.com OR ob@innovatingwithai.com OR eric@ericpartaker.com OR paul@shopifreaks.com OR techpresso@dupple.com OR theaireport@mail.beehiiv.com OR contact@aientrepreneurs.standout.digital OR rob@innovatingwithai.com OR runcilr@mail.packtpub.com OR hello@medium.com OR sdo@profile.co.za OR productforengineers@substack.com OR viarail@message.viarail.ca OR marriottbonvoy@email-marriott.com OR noreply@mixcloudmail.com OR cineplex@campaigns.cineplex.com OR no-reply@pizzaville.ca OR lkagan@itmustbedone.com OR lilly@thinkhomewise.com OR info@e.shoppersdrugmart.ca OR contact@ticketsmarter.com OR communications@mail.aircanada.com OR no-reply@ymcagta.org OR rewards@c.pxsmail.com OR mark@markmanson.net OR info@hammamspa.ca OR packt@mail.packtpub.com OR info@rocketdoctor.io OR info@upgradintl.com OR michael.ortega@predibase.com OR austinm@mail.packtpub.com OR canoo@canoo.ca OR noreply@email.pcoptimum.ca OR info@comms.hellopeter.co.za OR newsletter@whosponsorsstuff.com OR engineerofdata@substack.com OR info@learning.strayeruniversity.edu OR mmai@queensu.ca OR canoo@newsletter.canoo.ca OR no-reply@shopmakers.ca OR hello@refind.com OR no-reply@spotify.com OR contact@furnaceprices.ca OR newsletters@medium.com OR memberservices@ymcagta.org OR hello@contra.com OR Lesley.Davidson@ymcagta.org OR hello@atlanhq.com OR loblaws@e.loblaws.ca OR noreply@mailing.fifa.com OR store-news@amazon.ca OR sales@canadianappliance.ca OR notifications@account.brilliant.org OR support@news.chuckecheese.com OR info-pawsitivelypetskidscamp.com@shared1.ccsend.com OR mail@iconscout.com OR change@e.change.org OR hello@leanpub.com OR noreply@em.pcoptimum.ca OR mfit@queensu.ca OR giving@ymcagta.org OR oundation@tpl.ca OR foundation@tpl.ca OR updates@t.int.clearscore.com OR notice@eml.ecobee.com OR no-reply@email-kumon.com OR no-reply@lyftmail.com OR noreply@jackrabbittech.com OR editors-noreply@linkedin.com OR info@members.netflix.com OR webteam-actuarialcareers.com@shared1.ccsend.com OR thedankoe@substack.com OR surveys@canoo.ca OR updates-noreply@linkedin.com OR jakub@mail.leadershipintech.com OR meta@marketing.metamail.com OR info@updates.upgrad.com OR offers@e.walmart.ca OR no-reply@docker.com OR no-reply@customers.instacartemail.com OR linkedin@em.linkedin.com OR mktg@communications.cineplex.com OR admissions@quantic.edu OR notifications@mail.flova.ai OR news@nvidia.com OR updates@mp1.tripadvisor.com OR no-reply@substack.com OR canadiantire@express.can.medallia.ca OR noreply-reviews@canadiantire.ca OR reply@e.theburgerspriest.com OR applications-ww@admissions.ggu.edu OR info@vrcade.ca OR teamzoom@e.zoom.us OR email@marketing.metamail.com OR canadiantire@em.canadiantire.ca OR theexcellencecollection@news.theexcellencecollection.com OR vrbo@eg.vrbo.com OR noreply@hello.chamberlain.com OR theoutput@datacamp.com OR events@interviewkickstart.com OR noreply@campaign.eventbrite.com OR triangle@em.triangle.com OR secpro@substack.com OR info@topnotchresort.com OR support@codescene.com OR no-reply@taxtim.com OR info@onlineglobal.edgewood.edu OR mail1@gibs.co.za"
         }
       },
       "id": "d782c621-de5d-4f08-b569-06da2985620d",
       "name": "Search Unwanted Emails",
       "type": "n8n-nodes-base.gmail",
       "position": [
-        -3376,
-        608
+        -4064,
+        1088
       ],
       "typeVersion": 2.1,
       "webhookId": "94761dd3-0146-4963-ae09-75cc2ca1a668",
@@ -1758,8 +1758,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -3168,
-        752
+        -3888,
+        1264
       ],
       "id": "bf49ef0b-dc33-42b2-8422-81161b2de4c8",
       "name": "Edit Fields2"
@@ -1807,8 +1807,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1,
       "position": [
-        -2880,
-        752
+        -3600,
+        1264
       ],
       "id": "53adb02a-8488-4b42-a27c-439f997aa090",
       "name": "Insert row2"
@@ -1822,8 +1822,8 @@
       "name": "Trash Email2",
       "type": "n8n-nodes-base.gmail",
       "position": [
-        -2880,
-        528
+        -3600,
+        1088
       ],
       "typeVersion": 2.1,
       "webhookId": "2075d101-a254-46e1-a3d2-02b7145d5d1d",
@@ -2629,8 +2629,8 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "9dc93617-23af-456b-9492-5a849ff7a1b1",
-  "versionCounter": 80,
+  "versionId": "7020138a-ba6e-4627-81c3-b17d04f5fb04",
+  "versionCounter": 83,
   "triggerCount": 0,
   "tags": [],
   "shared": [
