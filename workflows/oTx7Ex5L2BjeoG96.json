@@ -348,7 +348,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "friendupdates@facebookmail.com"
         }
       },
@@ -544,7 +544,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "jobalerts-noreply@linkedin.com OR jobs-listings@linkedin.com OR jobs-noreply@linkedin.com OR notifications-noreply@linkedin.com OR messages-noreply@linkedin.com OR updates-noreply@linkedin.com OR invitations@linkedin.com"
         }
       },
@@ -688,7 +688,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "english-personalized-digest@quora.com OR sciencefringeareas-space@quora.com OR scienceandtechnologynews-space@quora.com OR wondersofthepast-space@quora.com OR spacenews-space@quora.com OR extremelyinterestingfacts-space@quora.com OR askdaddy-space@quora.com OR mathquestions-space@quora.com OR foodfunandphysics-space@quora.com OR meevnetsspace-space@quora.com OR osazesciencemastersspace-space@quora.com OR scientificsociety-space@quora.com OR truthaboutrussia-space@quora.com OR askanastronomer-space@quora.com OR beautifuluniverse11space-space@quora.com OR thesciencespace-space@quora.com OR codecamp-space@quora.com OR statepolitics-space@quora.com OR megadevices-space@quora.com OR blockuniversemodel-space@quora.com OR populartechnology-space@quora.com OR sciencephysicsmath-space@quora.com OR agingwithanattitude-space@quora.com OR jokesfunnystories-space@quora.com OR souravrakshitspace-space@quora.com OR guloceam-space@quora.com OR trumpersaretraitors-space@quora.com OR mechanicalengineeringinsightsmei-space@quora.com OR quicksearch-space@quora.com OR sciencehyperfieldshfmindrix-space@quora.com OR opentalkarena-space@quora.com OR matematicaarta-space@quora.com OR picturesfrommusichistory-space@quora.com OR scienceportal-space@quora.com OR corruptiontrumpandgop-space@quora.com OR brisbiz-space@quora.com OR theacademicspace-space@quora.com OR thevirago-space@quora.com OR israelobserver-space@quora.com OR boomersforchange-space@quora.com OR leftistviewpoints-space@quora.com"
         }
       },
@@ -857,7 +857,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "merlyns@mail.packtpub.com OR packtdatapro1@substack.com"
         }
       },
@@ -931,7 +931,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "newsletter@towardsdatascience.com"
         }
       },
@@ -1005,7 +1005,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "refactoring+monday-ideas@substack.com OR refactoring+essays@substack.com OR refactoring@substack.com"
         }
       },
@@ -1100,7 +1100,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "rbcrewards@newsletters.rbc.com"
         }
       },
@@ -1199,7 +1199,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "soa@eloq.soa.org OR webteam-actuarialcareers.com@share OR no-reply@cia-ica.ca  OR ciaevents@cia-ica.ca OR aiweekly@theinstitutes.org OR webteam@actuarialcareers.ccsend.com OR ciamembership@cia-ica.ca"
         }
       },
@@ -1322,7 +1322,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "noreply@emails.themobileshop.ca OR notifications@rci.rogers.com OR DONOTREPLY@rci.rogers.com"
         }
       },
@@ -1417,7 +1417,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "notifications@github.com"
         }
       },
@@ -1512,7 +1512,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "noreply@t.pcexpress.ca"
         }
       },
@@ -1586,7 +1586,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "newsletter@thedeepview.co OR aimaker@substack.com OR superintelligencenews@substack.com OR techpresso@dupple.com OR team@datacamp.com OR aiuncovering@substack.com OR incredible-ai@mail.beehiiv.com OR ai-signal@mail.beehiiv.com OR support@aicamp.ai OR info@abacusai.net OR hello@thenewsletterconference.com OR airepository@mail.beehiiv.com"
         }
       },
@@ -1660,7 +1660,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "algomaster@substack.com"
         }
       },
@@ -1885,7 +1885,7 @@
         "operation": "getAll",
         "limit": 500,
         "filters": {
-          "receivedAfter": "2026-07-21T00:00:00",
+          "receivedAfter": "2026-08-20T00:00:00",
           "sender": "sunlife@info.sunlife.ca"
         }
       },
